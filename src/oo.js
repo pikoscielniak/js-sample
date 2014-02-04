@@ -1,4 +1,6 @@
 var utils = require('./utils');
+var Dictionary = require('./Dictionary').Dictionary;
+
 function Rabbit(adjective) {
     this.adjective = adjective;
     this.speak = function (line) {
@@ -73,7 +75,19 @@ function test6() {
     utils.show(Rabbit.constructor);
     utils.show('---------------');
     utils.show(Object.prototype.constructor);
-    utils.show(Rabbit.prototype.constructor);
+    utils.show(Rabbit.prototype.construcor);
 }
 
-exports.test = test6;
+function test7() {
+    var colours = new Dictionary({Grover: "blue",
+        Elmo: "orange",
+        Bert: "yellow"});
+
+    utils.show(colours.contains("Grover"));
+    utils.show(colours.contains("constructor"));
+    colours.each(function(name, colour) {
+        utils.print(name, " is ", colour);
+    });
+}
+
+exports.test = test7;

@@ -400,3 +400,4 @@ exports.test = function () {
     show(filter(partial(op[">"], 5), [0, 4, 8, 12]));
 }
 exports.op = op;
+exports.forEachIn = forEachIn;
