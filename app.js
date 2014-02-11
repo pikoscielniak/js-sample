@@ -1,3 +1,3 @@
-var oo = require('./src/oo');
+var oo = require('./src/terrarium');
 
 oo.test();
